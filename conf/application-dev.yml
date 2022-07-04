@@ -2,3 +2,9 @@ server:
   name: task-flow
   port: 8081
   ip: 0.0.0.0
+database:
+  user: esns
+  password: minxing123
+  dbname: esns_production
+  port: 3306
+  ip: 127.0.0.1

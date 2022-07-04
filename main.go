@@ -20,6 +20,7 @@ func main() {
 	log.Printf("%s server environment %s,", actionType, envrionmentType)
 	conf := utils.GetConf(envrionmentType)
 	addrStr := fmt.Sprintf("%s:%d", conf.Server.Ip, conf.Server.Port)
+	utils.ConnDB(conf)
 	route := gin.Default()
 
 	route.Run(addrStr)

@@ -14,6 +14,13 @@ type ServerConf struct {
 		Port int
 		Ip   string
 	}
+	DataBase struct {
+		User     string
+		Ip       string
+		Port     int
+		Password string
+		Dbname   string
+	}
 }
 
 const (
