@@ -5,6 +5,8 @@ import (
 	"log"
 	"os"
 
+	"chen.com/task-flow/api/flow"
+	"chen.com/task-flow/api/taskgroup"
 	"chen.com/task-flow/utils"
 	"github.com/gin-gonic/gin"
 )
@@ -22,6 +24,10 @@ func main() {
 	addrStr := fmt.Sprintf("%s:%d", conf.Server.Ip, conf.Server.Port)
 	utils.ConnDB(conf)
 	route := gin.Default()
-
+	v1 := route.Group("api/v1")
+	{
+		taskgroup.RegistRoute(v1)
+		flow.RegistRoute(v1)
+	}
 	route.Run(addrStr)
 }
