@@ -3,8 +3,8 @@ server:
   port: 8081
   ip: 0.0.0.0
 database:
-  user: esns
-  password: minxing123
+  user: root
+  password: 123456
   dbname: esns_production
-  port: 3306
+  port: 33060
   ip: 127.0.0.1
